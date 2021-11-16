@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 19px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 20px;
+}
+
+.notes__container {
+  margin: 20px;
+  padding: 20px;
+  /* position: relative; */
+}
+
+.notes__header {
+  font-size: 25px;
+  display: flex;
+}
+
+.notes__title {
+  margin-bottom: 10px;
+}
+
+.notes__refresh {
+  margin-left: 20px;
+}
+
+.notes__refresh:hover {
+  cursor: pointer;
+}
+
+.notes__body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form__name {
+  margin-bottom: 10px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  height: 100px;
+}
+
+.form__submit {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.note__wrapper {
+  border: 1px solid black;
+  width: 250px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.note__delete {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  right: -10px;
+}
+
+.form__submit:hover,
+.note__delete:hover {
+  border-color: rgb(184, 183, 183);
+  cursor: pointer;
+}
