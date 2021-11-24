@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { useRef } from 'react';
 
 const Note = (props) => {
   const {
@@ -8,18 +7,11 @@ const Note = (props) => {
     deleteHandler
   } = props;
 
-  const myRef = useRef(null);
-
-  const onDelete = () => {
-    const { id } = myRef.current.dataset;
-    deleteHandler(id);
-  }
-
   return (
-    <div className='note__wrapper' ref={myRef} data-id={id}>
+    <div className='note__wrapper'>
       <div className='note__body'>
         <span className='note__text'>{text}</span>
-        <div className='note__delete' onClick={onDelete}>x</div>
+        <div className='note__delete' onClick={() => deleteHandler(id)}>x</div>
       </div>
     </div>
   )

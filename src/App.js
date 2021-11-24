@@ -9,17 +9,9 @@ import shortid from 'shortid';
 function App() {
   const [form, setForm] = useState({content: ''});
   const [notes, setNotes] = useState([]);
-  let timeout;
 
   useEffect(() => {
     loadNotes()
-  }, [])
-
-  useEffect(() => {
-    timeout = window.setTimeout(loadNotes, 100);
-    return () => {
-      window.clearTimeout(timeout);
-    }
   }, [notes])
 
   const loadNotes = () => {
